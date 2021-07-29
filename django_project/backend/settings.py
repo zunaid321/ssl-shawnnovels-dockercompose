@@ -158,7 +158,7 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://hdm.tnz.mybluehost.me/'
 STATIC_ROOT = '/static/'
 
 STATICFILES_DIRS = [
