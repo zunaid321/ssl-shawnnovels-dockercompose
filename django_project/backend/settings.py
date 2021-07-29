@@ -30,9 +30,11 @@ DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = [
     "127.0.0.1",
+    "localhost",
     "hdm.tnz.mybluehost.me",
     "django",
     "162.240.12.156",
+    ""
 ]
 
 
@@ -145,7 +147,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://shawnnovel.aveneur.com"
+    "http://shawnnovel.aveneur.com",
+    "http://hdm.tnz.mybluehost.me",
+
 ]
 
 STATIC_URL = '/static/'
