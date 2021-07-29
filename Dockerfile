@@ -1,10 +1,10 @@
-FROM python:3.8.5-alpine
+FROM ubuntu:20.04
+RUN apt-get update && apt-get -y install libpq-dev gcc && pip install psycopg2
 
 RUN pip install --upgrade pip
 
 COPY ./requirements.txt .
-RUN apk add postgresql-dev
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 COPY ./django_project /app
 
