@@ -1,4 +1,5 @@
 #!/bin/sh
+RUN apk add postgresql-dev
 pip install -r requirements.txt
 python manage.py makemigrations --no-input
 python manage.py migrate --no-input
