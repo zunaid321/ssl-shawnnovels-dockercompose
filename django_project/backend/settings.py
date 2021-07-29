@@ -31,6 +31,8 @@ DEBUG = os.getenv('DEBUG')
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "hdm.tnz.mybluehost.me",
+    "django",
+    "162.240.12.156",
 ]
 
 
