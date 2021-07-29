@@ -168,4 +168,4 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = 'static/images'
-MEDIA_URL = '/images/'
+MEDIA_URL = 'http://hdm.tnz.mybluehost.me/images/'
