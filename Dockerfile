@@ -3,6 +3,7 @@ FROM python:3.8.5-alpine
 RUN pip install --upgrade pip
 
 COPY ./requirements.txt .
+RUN apk add postgresql-dev
 RUN pip install -r requirements.txt
 
 COPY ./django_project /app
