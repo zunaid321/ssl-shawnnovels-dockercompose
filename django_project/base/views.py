@@ -32,4 +32,4 @@ class ClientListView(ListAPIView):
 
 class LawyerListView(ListAPIView):
     serializer_class = LawyerSerializer
-    queryset = Lawyers.objects.all()
+    queryset = Lawyer.objects.all()
