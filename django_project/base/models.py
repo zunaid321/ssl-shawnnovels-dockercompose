@@ -61,7 +61,7 @@ class Contact(models.Model):
     def __str__(self) -> str:
         return self.email
     
-class Lawyers(models.Model):
+class Lawyer(models.Model):
     name = models.CharField(max_length=100, default='')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
     credentials = ArrayField(models.CharField(max_length=150, default=''))
