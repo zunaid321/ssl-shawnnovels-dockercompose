@@ -11,6 +11,9 @@ def upload_news_image(instance,filename):
 def upload_client_image(instance,filename):
     return "clients/{filename}".format(filename = filename)
 
+def upload_lawyer_image(instance,filename):
+    return "lawyer/{filename}".format(filename = filename)
+
 class Service(models.Model):
     SERVICE_CHOICES = [
         ('CBT', 'Cross Border Transactions'),
@@ -56,5 +59,11 @@ class Contact(models.Model):
 
     def __str__(self) -> str:
         return self.email
+    
+class Lawyers(models.Model):
+    name = models.CharField(max_length=100, default='')
+    picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
+    credentials = models.ArrayField(models.CharField(max_length=150, default=''))
+    description = models.TextField(default='')
 
 
