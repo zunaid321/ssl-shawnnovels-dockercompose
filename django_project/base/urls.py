@@ -8,4 +8,5 @@ urlpatterns = [
     path('newsList', NewsListView.as_view()),
     path('news/<int:id>', NewsDetailView.as_view()),
     path('clients', ClientListView.as_view()),
+    path('lawyers', LawyerListView.as_view()),
 ]
