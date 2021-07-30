@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 
@@ -63,7 +64,7 @@ class Contact(models.Model):
 class Lawyers(models.Model):
     name = models.CharField(max_length=100, default='')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
-    credentials = models.ArrayField(models.CharField(max_length=150, default=''))
+    credentials = ArrayField(models.CharField(max_length=150, default=''))
     description = models.TextField(default='')
 
 
