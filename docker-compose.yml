@@ -3,7 +3,7 @@ version: '3.7'
 services:
   django_gunicorn:
     volumes:
-      - static:/static
+      - - static-data:/vol/web
     env_file:
       - .env
     build:
@@ -13,12 +13,12 @@ services:
   nginx:
     build: ./nginx
     volumes:
-      - static:/static
+      - static-data:/vol/static
     ports:
       - "80:80"
     depends_on:
       - django_gunicorn
 
 volumes:
-  static:
+  static-data:
 
