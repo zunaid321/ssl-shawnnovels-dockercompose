@@ -159,14 +159,10 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
-STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_ROOT = 'static/images'
-MEDIA_URL = '/images/'
+MEDIA_ROOT = '/vol/web/media'
+STATIC_ROOT = '/vol/web/static'
