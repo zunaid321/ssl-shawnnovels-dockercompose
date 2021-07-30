@@ -29,3 +29,7 @@ class NewsDetailView(ListAPIView):
 class ClientListView(ListAPIView):
     serializer_class = ClientSerializer
     queryset = Client.objects.all()
+
+class LawyerListView(ListAPIView):
+    serializer_class = LawyerSerializer
+    queryset = Lawyers.objects.all()
