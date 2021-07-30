@@ -10,7 +10,6 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt && \
     mkdir -p /vol/web/static && \
     mkdir -p /vol/web/media && \
-    chown -R app:app /vol && \
     chmod -R 755 /vol
 
 COPY ./django_project /app
