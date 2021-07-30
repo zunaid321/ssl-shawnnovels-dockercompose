@@ -1,14 +1,12 @@
-from django.shortcuts import render, get_object_or_404
 from .models import *
 from .serializers import *
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView, RetrieveAPIView
-from rest_framework import permissions
-from rest_framework.response import Response
-from rest_framework import status
-from django.core.exceptions import ObjectDoesNotExist
-from django.db.utils import IntegrityError
+from rest_framework.generics import ListAPIView, RetrieveAPIView
+from rest_framework.pagination import PageNumberPagination
 # Create your views here.
 
+class SmallPagesPagination(PageNumberPagination):  
+    page_size = 6
+    
 class ServiceListView(ListAPIView):
     serializer_class = ServiceListSerializer
     queryset = Service.objects.all()
@@ -21,6 +19,7 @@ class ServiceDetailView(RetrieveAPIView):
 class NewsListView(ListAPIView):
     serializer_class = NewsListSerializer
     queryset = News.objects.all()
+    pagination_class = SmallPagesPagination
 
 class NewsDetailView(ListAPIView):
     serializer_class = NewsSerializer
