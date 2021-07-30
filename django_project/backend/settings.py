@@ -159,10 +159,8 @@ CORS_ALLOWED_ORIGINS = [
 
 ]
 
-STATIC_URL = '/static/static/'
-MEDIA_URL = '/static/media/'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-MEDIA_ROOT = '/vol/web/media'
-STATIC_ROOT = '/vol/web/static'
+STATIC_ROOT = '/static/'
+STATIC_URL = '/static/'
