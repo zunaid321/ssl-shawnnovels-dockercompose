@@ -32,5 +32,5 @@ class ClientSerializer(serializers.ModelSerializer):
  
 class LawyerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Lawyers
+        model = Lawyer
         fields = '__all__'
