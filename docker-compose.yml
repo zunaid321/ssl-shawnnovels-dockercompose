@@ -1,5 +1,4 @@
 version: '3.7'
-version: '3.7'
 
 services:
   django_gunicorn:
@@ -15,9 +14,11 @@ services:
     build: ./nginx
     volumes:
       - static-data:/vol/static
+      - www-certs:/etc/letsencrypt
+    env_file: .env  
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     depends_on:
       - django_gunicorn
 
