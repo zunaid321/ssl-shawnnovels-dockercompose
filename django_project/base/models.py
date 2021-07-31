@@ -72,5 +72,7 @@ class People(models.Model):
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
     credentials = models.TextField(default='')
     description = models.TextField(default='')
-
+    
+    def __str__(self) -> str:
+        return self.name
 
