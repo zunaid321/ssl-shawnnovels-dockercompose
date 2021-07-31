@@ -67,7 +67,7 @@ class People(models.Model):
         ('Associates', 'Associates'),
         ('Councel', 'Councel'),
     ]
-    type = models.CharField(choices=PEOPLE_CHOICES, default= 'Councel')
+    type = models.CharField(max_length=11, choices=PEOPLE_CHOICES, default= 'Councel')
     name = models.CharField(max_length=100, default='')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
     credentials = models.TextField(default='')
