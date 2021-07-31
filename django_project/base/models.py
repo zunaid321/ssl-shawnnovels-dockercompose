@@ -62,7 +62,13 @@ class Contact(models.Model):
         return self.email
     
 class Lawyer(models.Model):
+    SERVICE_CHOICES = [
+        ('Seniors', 'Seniors'),
+        ('Associates', 'Associates'),
+        ('Off Councel', 'Off Councel'),
+    ]
     name = models.CharField(max_length=100, default='')
+    type = models.CharField(max_length=11, choices=SERVICE_CHOICES, default= 'Off Councel')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
 #     credentials = ArrayField(ArrayField(models.CharField(max_length=150, blank=True)), size= 1)
     credentials = models.TextField(default='')
