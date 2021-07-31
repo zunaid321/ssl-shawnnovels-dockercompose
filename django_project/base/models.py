@@ -68,7 +68,7 @@ class Lawyer(models.Model):
         ('Off Councel', 'Off Councel'),
     ]
     name = models.CharField(max_length=100, default='')
-    type = models.CharField(max_length=11, choices=LAWYER_CHOICES, default= 'Off Councel')
+    position = models.CharField(max_length=11, choices=LAWYER_CHOICES, default= 'Off Councel')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
 #     credentials = ArrayField(ArrayField(models.CharField(max_length=150, blank=True)), size= 1)
     credentials = models.TextField(default='')
