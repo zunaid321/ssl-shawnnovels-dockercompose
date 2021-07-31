@@ -61,16 +61,15 @@ class Contact(models.Model):
     def __str__(self) -> str:
         return self.email
     
-class Lawyer(models.Model):
-    LAWYER_CHOICES = [
+class People(models.Model):
+    PEOPLE_CHOICES = [
         ('Seniors', 'Seniors'),
         ('Associates', 'Associates'),
         ('Councel', 'Councel'),
     ]
-    type = models.CharField(max_length=11, choices=LAWYER_CHOICES, default= 'Councel')
+    type = models.CharField(choices=LAWYER_CHOICES, default= 'Councel')
     name = models.CharField(max_length=100, default='')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
-#     credentials = ArrayField(ArrayField(models.CharField(max_length=150, blank=True)), size= 1)
     credentials = models.TextField(default='')
     description = models.TextField(default='')
 
