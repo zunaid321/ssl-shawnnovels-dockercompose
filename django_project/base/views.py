@@ -21,7 +21,7 @@ class NewsListView(ListAPIView):
     queryset = News.objects.all()
     pagination_class = SmallPagesPagination
 
-class NewsDetailView(ListAPIView):
+class NewsDetailView(RetrieveAPIView):
     serializer_class = NewsSerializer
     queryset = News.objects.all()
     lookup_field = "id"
