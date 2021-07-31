@@ -30,7 +30,7 @@ class ClientSerializer(serializers.ModelSerializer):
         model = Client
         fields = '__all__'
  
-class LawyerSerializer(serializers.ModelSerializer):
+class PeopleSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Lawyer
+        model = People
         fields = '__all__'
