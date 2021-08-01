@@ -18,7 +18,7 @@ class ServiceSerializer(serializers.ModelSerializer):
 class NewsListSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        fields = ['heading', 'id']
+        fields = ['heading', 'id', 'image']
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
