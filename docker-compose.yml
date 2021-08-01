@@ -14,7 +14,7 @@ services:
     build: ./nginx
     volumes:
       - static-data:/vol/static
-      - www-certs:/etc/letsencrypt
+      - ./www-certs:/etc/letsencrypt
     env_file: .env  
     ports:
       - "80:80"
