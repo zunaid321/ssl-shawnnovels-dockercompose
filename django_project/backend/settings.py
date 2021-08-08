@@ -153,7 +153,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://shawnnovel.aveneur.com",
+    "http://www.shawnnovel.aveneur.com",
     "https://shawnnovel.aveneur.com",
+    "https://www.shawnnovel.aveneur.com",
     "http://hdm.tnz.mybluehost.me",
     "http://zunaid.aveneur.com",
     "https://zunaid.aveneur.com",
