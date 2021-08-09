@@ -10,5 +10,5 @@ python manage.py makemigrations --no-input
 python manage.py migrate --no-input
 python manage.py collectstatic --no-input
 
-gunicorn --workers = 5 --threads = 2 backend.wsgi:application --bind 0.0.0.0:8000
+gunicorn backend.wsgi:application --workers=2 --threads=4 --worker-class=gthread --bind 0.0.0.0:8000
 
