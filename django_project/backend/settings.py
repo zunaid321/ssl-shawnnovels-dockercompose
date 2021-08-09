@@ -159,6 +159,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://hdm.tnz.mybluehost.me",
     "http://zunaid.aveneur.com",
     "https://zunaid.aveneur.com",
+    "http://www.shawnnovel.com",
+    "https://shawnnovel.com",
+    "www.shawnnovel.com",
 
 ]
 
