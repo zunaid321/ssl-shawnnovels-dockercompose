@@ -161,6 +161,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://zunaid.aveneur.com",
     "http://www.shawnnovel.com",
     "https://shawnnovel.com",
+    "https://www.shawnnovel.com",
 
 ]
 
