@@ -33,7 +33,7 @@ class Service(models.Model):
         return self.heading
 
 class News(models.Model):
-    heading = models.CharField(max_length=50, default='')
+    heading = models.CharField(max_length=250, default='')
     date = models.DateField(auto_now_add=True)
     image = models.ImageField(upload_to=upload_news_image, null =True, blank=True)
     content = models.TextField(default='')
