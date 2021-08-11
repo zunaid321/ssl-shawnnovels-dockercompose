@@ -25,7 +25,7 @@ class Service(models.Model):
         ('EL', 'Employment & Labor'),
     ]
     type = models.CharField(max_length=3, choices=SERVICE_CHOICES, default= 'CBT')
-    heading = models.CharField(max_length=255, default='')
+    heading = models.CharField(max_length=50, default='')
     image = models.ImageField(upload_to=upload_service_image, null =True, blank=True)
     content = models.TextField(default='')
     
@@ -33,7 +33,7 @@ class Service(models.Model):
         return self.heading
 
 class News(models.Model):
-    heading = models.CharField(max_length=255, default='')
+    heading = models.CharField(max_length=50, default='')
     date = models.DateField(auto_now_add=True)
     image = models.ImageField(upload_to=upload_news_image, null =True, blank=True)
     content = models.TextField(default='')
@@ -45,7 +45,7 @@ class News(models.Model):
         return self.heading
 
 class Client(models.Model):
-    name = models.CharField(max_length=255, default='')
+    name = models.CharField(max_length=50, default='')
     logo = models.ImageField(upload_to=upload_client_image, null =True)
 
     def __str__(self) -> str:
@@ -68,7 +68,7 @@ class People(models.Model):
         ('Councel', 'Councel'),
     ]
     type = models.CharField(max_length=11, choices=PEOPLE_CHOICES, default= 'Councel')
-    name = models.CharField(max_length=255, default='')
+    name = models.CharField(max_length=100, default='')
     picture = models.ImageField(upload_to=upload_lawyer_image, null =True)
     credentials = models.TextField(default='')
     description = models.TextField(default='')
