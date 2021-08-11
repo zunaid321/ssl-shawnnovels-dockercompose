@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='client',
             name='name',
-            field=models.CharField(default='', max_length=50),
+            field=models.CharField(default='', max_length=250),
         ),
         migrations.AlterField(
             model_name='contact',
@@ -48,7 +48,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='news',
             name='heading',
-            field=models.CharField(default='', max_length=50),
+            field=models.CharField(default='', max_length=250),
         ),
         migrations.AlterField(
             model_name='service',
@@ -58,6 +58,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='service',
             name='heading',
-            field=models.CharField(default='', max_length=50),
+            field=models.CharField(default='', max_length=250),
         ),
     ]
