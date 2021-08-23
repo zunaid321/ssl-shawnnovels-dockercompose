@@ -35,7 +35,7 @@ class Service(models.Model):
     
     @receiver(pre_delete, sender=Service)
     def service_delete(sender, instance, **kwargs):
-    instance.file.delete(False)
+        instance.file.delete(False)
 
 class News(models.Model):
     heading = models.CharField(max_length=50, default='')
@@ -51,7 +51,7 @@ class News(models.Model):
     
     @receiver(pre_delete, sender=News)
     def news_delete(sender, instance, **kwargs):
-    instance.file.delete(False)
+        instance.file.delete(False)
 
 class Client(models.Model):
     name = models.CharField(max_length=50, default='')
@@ -62,7 +62,7 @@ class Client(models.Model):
     
     @receiver(pre_delete, sender=Client)
     def mymodel_delete(sender, instance, **kwargs):
-    instance.file.delete(False)
+        instance.file.delete(False)
 
 class Contact(models.Model):
     first_name = models.CharField(max_length=50, default='')
@@ -91,5 +91,5 @@ class People(models.Model):
     
     @receiver(pre_delete, sender=People)
     def people_delete(sender, instance, **kwargs):
-    instance.file.delete(False)
+        instance.file.delete(False)
 
